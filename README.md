@@ -55,4 +55,4 @@ The same setup is used for the blogs of the sister projects:
 
 - ThunderFly: <https://github.com/ThunderFly-aerospace/blog> (this repository)
 - UST: <https://github.com/UniversalScientificTechnologies/blog>
-- MLAB: repository not created yet
+- MLAB: <https://github.com/cisar2218/blog>
