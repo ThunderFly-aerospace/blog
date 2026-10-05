@@ -54,5 +54,5 @@ jane-doe:
 The same setup is used for the blogs of the sister projects:
 
 - ThunderFly: <https://github.com/ThunderFly-aerospace/blog> (this repository)
-- UST: repository not created yet
+- UST: <https://github.com/UniversalScientificTechnologies/blog>
 - MLAB: repository not created yet
