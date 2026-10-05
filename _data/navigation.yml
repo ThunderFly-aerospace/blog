@@ -1,0 +1,9 @@
+main:
+  - title: "Posts"
+    url: /
+  - title: "Categories"
+    url: /category/
+  - title: "Tags"
+    url: /tag/
+  - title: "thunderfly.cz"
+    url: https://www.thunderfly.cz/
