@@ -1,7 +1,7 @@
 # This file is *NOT* reloaded automatically by `jekyll serve`.
 # Restart the server after changing it.
 
-theme: minimal-mistakes-jekyll
+remote_theme: "mmistakes/minimal-mistakes@4.28.1"
 
 # Site settings
 title: ThunderFly
@@ -66,6 +66,7 @@ excerpt_separator: "\n\n\n\n"
 paginate: 10
 
 plugins:
+  - jekyll-remote-theme
   - jekyll-paginate
   - jekyll-feed
   - jekyll-sitemap
@@ -93,3 +94,6 @@ defaults:
 exclude:
   - README.md
   - LICENSE
+  - Gemfile
+  - Gemfile.lock
+  - vendor/
