@@ -1,39 +1,56 @@
-# Welcome to Jekyll!
-#
-# This config file is meant for settings that affect your whole blog, values
-# which you are expected to set up once and rarely need to edit after that.
-# For technical reasons, this file is *NOT* reloaded automatically when you use
-# 'jekyll serve'. If you change this file, please restart the server process.
+# This file is *NOT* reloaded automatically by `jekyll serve`.
+# Restart the server after changing it.
+
+theme: minimal-mistakes-jekyll
 
 # Site settings
 title: ThunderFly
-brief-intro: ThunderFly Aerospace blog
-baseurl: "" # the subpath of your site, e.g. /blog
+masthead_title: Blog
+description: The blog describes the story behind the scenes of ThunderFly company products.
 url: "https://blog.thunderfly.cz" # the base hostname & protocol for your site
+baseurl: "" # the subpath of your site, e.g. /blog
+logo: /assets/images/tf-logo.png
+locale: en-US
+
+# Brand identity, consumed by assets/css/main.scss and _includes/head/custom.html.
+# A blog of another brand (UST, MLAB) changes only this block and the settings above.
+brand:
+  font: 'Cabin, "Helvetica Neue", Arial, sans-serif'
+  font_url: "https://fonts.googleapis.com/css2?family=Cabin:wght@400;600;700&display=swap"
+  primary: "#fbba00"
+  link: "#333"
+  masthead_bg: "#000"
+  masthead_link: "#fff"
+  masthead_link_hover: "#fbba00"
+  footer_bg: "#000"
+  footer_text: "#fff"
+  radius: "0"
+
+# Default author, used for posts without `author:` and for the feed as a whole.
+# Posts select a person with `author: <key from _data/authors.yml>`.
+author:
+  name: "ThunderFly"
+  bio: "ThunderFly s.r.o. team"
+
+# Google AdSense publisher ID. Remove the line to disable AdSense.
+adsense_client: "ca-pub-9139027259917346"
+
+footer:
+  links:
+    - label: "GitHub"
+      icon: "fab fa-fw fa-github"
+      url: "https://github.com/ThunderFly-aerospace"
+    - label: "Facebook"
+      icon: "fab fa-fw fa-facebook"
+      url: "https://www.facebook.com/ThunderFlyAerospace"
+    - label: "LinkedIn"
+      icon: "fab fa-fw fa-linkedin"
+      url: "https://www.linkedin.com/in/thunderfly"
+    - label: "Email"
+      icon: "fas fa-fw fa-envelope"
+      url: "mailto:info@thunderfly.cz"
 
 permalink: /:year/:month/:day/:title/
-
-# other links
-facebook_username: ThunderFlyAerospace
-github_username:  ThunderFly-aerospace
-email: info@thunderfly.cz
-linkedIn_username: thunderfly
-
-
-description_footer: The blog describes the story behind the scenes of ThunderFly company products.  
-
-# comments
-# two ways to comment, only choose one, and use your own short name
-# 两种评论插件，选一个就好了，使用自己的 short_name
-#duoshuo_shortname: #hygblog
-#disqus_shortname: gaohaoyang
-
-# statistic analysis 统计代码
-# 百度统计 id，将统计代码替换为自己的百度统计id，即
-# hm.src = "//hm.baidu.com/hm.js?xxxxxxxxxxxx";
-# xxxxx字符串
-#baidu_tongji_id: cf8506e0ef223e57ff6239944e5d46a4
-#google_analytics_id: 
 
 # Build settings
 markdown: kramdown
@@ -42,19 +59,37 @@ kramdown:
   input: GFM
   syntax_highlighter: rouge
 
-# port
-# port: 1234
-
-# url
-category_dir: category/
-tag_dir: tag/
-
 # excerpt
 excerpt_separator: "\n\n\n\n"
 
 # paginate
-gems: [jekyll-paginate]
 paginate: 10
 
 plugins:
   - jekyll-paginate
+  - jekyll-feed
+  - jekyll-sitemap
+  - jekyll-include-cache
+
+category_archive:
+  type: liquid
+  path: /category/
+tag_archive:
+  type: liquid
+  path: /tag/
+
+defaults:
+  - scope:
+      path: ""
+      type: posts
+    values:
+      layout: single
+      author_profile: true
+      show_date: true
+      read_time: true
+      share: false
+      related: true
+
+exclude:
+  - README.md
+  - LICENSE
